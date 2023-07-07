@@ -1,0 +1,3 @@
+# eShopProject
+A full Fledge backend project is on building phase during the learning procedure (Node.js, Express.Js).
+Stay tuned for more updates...
