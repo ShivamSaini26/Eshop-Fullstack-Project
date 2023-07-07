@@ -1,3 +1,3 @@
 # eShopProject
-A full Fledge backend project is on building phase during the learning procedure (Node.js, Express.Js).
+In a learning phase for my backend developer roadmap, I am developing an ecommerce platform using popular technlologies like Node.js and Express.js.
 Stay tuned for more updates...
