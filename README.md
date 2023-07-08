@@ -1,0 +1,3 @@
+# eShopProject
+In a learning phase for my backend developer roadmap, I am developing an ecommerce platform using popular technlologies like Node.js and Express.js.
+Stay tuned for more updates...
