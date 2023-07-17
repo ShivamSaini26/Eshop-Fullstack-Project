@@ -1,3 +1,6 @@
+/*
+connectivity without sequelize package
+
 const mysql = require('mysql2');
 
 const pool = mysql.createPool({
@@ -8,3 +11,15 @@ const pool = mysql.createPool({
 });
 
 module.exports = pool.promise();
+*/
+
+//connectivity with sequelize package
+
+const Sequelize = require("sequelize");
+
+const sequelize = new Sequelize("node-complete", "root", "shivam26", {
+  dialect: "mysql",
+  host: "localhost",
+});
+
+module.exports=sequelize;
