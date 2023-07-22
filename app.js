@@ -38,8 +38,9 @@ Product.belongsTo(User, {
   constraints: true,
   onDelete: 'CASCADE'
 });
+User.hasMany(Product);
 
-
+//static user account
 sequelize
   .sync().then(result => {
     return User.findByPk(1);
