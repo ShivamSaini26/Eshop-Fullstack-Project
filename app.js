@@ -6,10 +6,13 @@ const bodyParser = require('body-parser');
 const errorController = require('./controllers/error');
 const sequelize = require('./util/database');
 
+//models
 const Product = require('./models/product');
 const User = require('./models/user');
 const Cart = require('./models/cart');
 const CartItem = require('./models/cart-items');
+const OrderItem = require('./models/order-items');
+const Order = require('./models/order');
 
 
 const app = express();
@@ -45,11 +48,14 @@ User.hasOne(Cart);
 Cart.belongsTo(User);
 Cart.belongsToMany(Product,{through:CartItem});
 Product.belongsToMany(Cart, { through: CartItem });
-
+Order.belongsTo(User);
+User.hasMany(Order);
+Order.belongsToMany(Product,{through:OrderItem});
 //static user account
 sequelize
   // .sync({ force: true })  
-.sync().then(result => {
+.sync()
+.then(result => {
     return User.findByPk(1);
   }).then(user => {
     if (!user) {
